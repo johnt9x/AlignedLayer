@@ -1,5 +1,5 @@
 # AlignedLayer
 ## Auto
 ```
-wget -O alignedlayer_auto.sh https://raw.githubusercontent.com/toanbk/NodeInstaller/main/AlignedLayer/alignedlayer_auto.sh && chmod +x alignedlayer_auto.sh && ./alignedlayer_auto.sh
+wget -O alignedlayer.sh https://raw.githubusercontent.com/johnt9x/AlignedLayer/main/alignedlayer.sh && chmod +x alignedlayer.sh && ./alignedlayer.sh
 ```
