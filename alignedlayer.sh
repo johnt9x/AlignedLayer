@@ -13,7 +13,7 @@ sudo apt update && apt upgrade -y
 sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -y
 
 #Install GO
-ver="1.21.7"
+ver="1.21.4"
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
 sudo rm -rf /usr/local/go
 sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
@@ -81,11 +81,11 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 cd $HOME
-
-cd $HOME
 sudo systemctl daemon-reload
 sudo systemctl enable alignedlayer
 sudo systemctl restart alignedlayer
+
+sleep 10
 
 echo '=============== SETUP FINISHED ==================='
 echo -e 'To check logs: \e[1m\e[32mjournalctl -u alignedlayer -f -o cat\e[0m'
