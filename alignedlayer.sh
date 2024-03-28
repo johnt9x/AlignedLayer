@@ -1,4 +1,12 @@
 #!/bin/bash
+# Prompt for the moniker
+read -p "Enter your moniker (a short name for your node): " MONIKER
+
+# Check if the MONIKER is empty and prompt again until it's not empty
+while [ -z "$MONIKER" ]; do
+    read -p "Moniker cannot be empty. Please enter your moniker: " MONIKER
+done
+
 clear
 
 if [[ ! -f "$HOME/.bash_profile" ]]; then
@@ -29,8 +37,6 @@ sudo mv alignedlayerd /usr/local/bin/
 cd $HOME
 alignedlayerd version
 
-
-MONIKER="MyNode"
 NODE_HOME=$HOME/.alignedlayer
 CHAIN_BINARY=alignedlayerd
 CHAIN_ID=alignedlayer
