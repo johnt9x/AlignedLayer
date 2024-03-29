@@ -87,8 +87,8 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 cd $HOME
-curl -Ls https://snap.vnbnode.com/alignedlayer/genesis.json > $HOME/.alignedlayer/config/genesis.json
-curl -Ls https://snap.vnbnode.com/alignedlayer/addrbook.json > $HOME/.alignedlayer/config/addrbook.json
+curl -Ls https://raw.githubusercontent.com/vnbnode/binaries/main/Projects/AlignedLayer/genesis.json > $HOME/.alignedlayer/config/genesis.json
+curl -Ls https://raw.githubusercontent.com/vnbnode/binaries/main/Projects/AlignedLayer/addrbook.json > $HOME/.alignedlayer/config/addrbook.json
 sed -i \
   -e 's|^node *=.*|node = "tcp://localhost:24257"|' \
   $HOME/.alignedlayer/config/client.toml
